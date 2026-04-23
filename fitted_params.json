@@ -1,0 +1,59 @@
+{
+  "schema_version": 6,
+  "model": "iodine_clock_ferric_depletion_v6",
+  "stock_concentrations": {
+    "na2s2o3_m": 0.015,
+    "ki_m": 0.2,
+    "fecl3_m": 0.3,
+    "starch_g_l": 10.0
+  },
+  "reference_volumes_ml": {
+    "na2s2o3_ml": 3.875,
+    "ki_ml": 5.0,
+    "starch_ml": 4.0,
+    "water_ml": 2.125,
+    "fecl3_ml": 0.3
+  },
+  "reference_concentrations": {
+    "total_volume_ml": 15.3,
+    "na2s2o3_m": 0.0037990196078431368,
+    "ki_m": 0.06535947712418301,
+    "fecl3_m": 0.0058823529411764705,
+    "starch_g_l": 2.6143790849673203
+  },
+  "fixed_params": {
+    "iodide_order": 2.0,
+    "stoich_fe_per_s2o3": 1.0,
+    "visual_i2_threshold_m": 1e-06,
+    "starch_detection_order": 0.2,
+    "davies_a_25c": 0.51,
+    "davies_max_ionic_strength_m": 0.5,
+    "no_color_time_s": 3600.0
+  },
+  "fit_params": {
+    "rate_constant": 170.1035439067107,
+    "lag_s": 3.242757390180105,
+    "iodide_saturation_m_inv": 180.0,
+    "ferric_depletion_alpha": 1.2847167581710248
+  },
+  "training_summary": {
+    "rows": 24,
+    "rmse_s": 3.9853247630647943,
+    "mae_s": 3.025995868038244,
+    "fitted_at_utc": "2026-04-21T03:32:55.227731+00:00",
+    "columns": [
+      "na2s2o3_ml",
+      "ki_ml",
+      "starch_ml",
+      "water_ml",
+      "fecl3_ml",
+      "time_s",
+      "na2s2o3_stock_m",
+      "ki_stock_m",
+      "fecl3_stock_m",
+      "starch_stock_g_l"
+    ],
+    "ki_saturation_fitted": false,
+    "note": "The model uses activity-corrected Fe3+/I- kinetics and explicit Fe3+ stoichiometric depletion. Add KI/FeCl3 scans to identify iodide saturation and ferric depletion outside this calibration set."
+  }
+}
